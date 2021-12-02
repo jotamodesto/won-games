@@ -1,4 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react'
+import { ThemeProvider as ThemeProviderOld } from 'emotion-theming';
 
 import globalStyles from 'styles/global'
 import theme from 'styles/theme'
@@ -14,10 +15,12 @@ export const parameters = {
 }
 
 export const decorators = [
-  (Story) => (
+  Story => (
     <ThemeProvider theme={theme}>
       <Global styles={globalStyles} />
-      <Story />
+      <ThemeProviderOld theme={theme} >
+        <Story />
+      </ThemeProviderOld>
     </ThemeProvider>
   )
 ]
