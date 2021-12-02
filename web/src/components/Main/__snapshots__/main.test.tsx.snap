@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the heading 1`] = `
+.emotion-0 {
+  padding: 1em;
+}
+
+<main
+  class="emotion-0"
+>
+  <h1>
+    Boilerplate setup
+  </h1>
+</main>
+`;

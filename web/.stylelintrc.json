@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-recess-order",
+    "stylelint-config-styled-components",
+    "stylelint-prettier/recommended"
+  ],
+  "customSyntax": "@stylelint/postcss-css-in-js"
+}

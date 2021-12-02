@@ -1,0 +1,21 @@
+{
+  "css.validate": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "typescript",
+    "javascript"
+  ]
+}
