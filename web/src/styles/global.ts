@@ -1,10 +1,13 @@
-import { css } from '@emotion/react'
+import { css, Theme } from '@emotion/react'
 
-const globalStyles = css`
+const globalStyles = (theme: Theme) => css`
   * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -12,9 +15,8 @@ const globalStyles = css`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.6rem;
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.sizes.medium};
   }
 `
 
