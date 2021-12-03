@@ -1,13 +1,53 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
+import { matchers } from '@emotion/jest'
 
 import Logo from '.'
 
+expect.extend(matchers)
+
 describe('<Logo />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Logo />)
+  it('should render a white label by default', () => {
+    renderWithTheme(<Logo />)
 
-    expect(screen.getByRole('heading', { name: /Logo/i })).toBeInTheDocument()
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
+      color: '#FAFAFA'
+    })
+  })
 
-    expect(container.firstChild).toMatchSnapshot()
+  it('should render a black label when color is passed', () => {
+    renderWithTheme(<Logo color="black" />)
+
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
+      color: '#030517'
+    })
+  })
+
+  it('should render a normal logo when size is default', () => {
+    renderWithTheme(<Logo />)
+
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
+      width: '11rem'
+    })
+  })
+
+  it('should render a bigger logo', () => {
+    renderWithTheme(<Logo size="large" />)
+
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
+      width: '20rem'
+    })
+  })
+
+  it('should render a bigger logo without text if hideOnMobile', () => {
+    renderWithTheme(<Logo hideOnMobile />)
+
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyleRule(
+      'width',
+      '5.8rem',
+      {
+        media: '(max-width: 61.99875em)'
+      }
+    )
   })
 })

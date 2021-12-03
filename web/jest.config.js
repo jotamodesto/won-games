@@ -18,6 +18,7 @@ module.exports = {
     https://jestjs.io/docs/webpack#handling-static-assets */
     '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/__mocks__/fileMock.js'
   },
+  moduleDirectories: ['node_modules', 'src'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
