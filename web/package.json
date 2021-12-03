@@ -16,6 +16,7 @@
     "build-storybook": "build-storybook -s ./public"
   },
   "dependencies": {
+    "@emotion-icons/material-outlined": "^3.14.0",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "next": "12.0.4",
@@ -40,7 +41,6 @@
     "@typescript-eslint/parser": "^5.4.0",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
-    "emotion-theming": "^11.0.0",
     "eslint": "7",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^16.0.0",
