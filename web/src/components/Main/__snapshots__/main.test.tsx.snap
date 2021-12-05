@@ -6,7 +6,7 @@ exports[`<Main /> should render the heading 1`] = `
 }
 
 <main
-  class="emotion-0"
+  class="emotion-0 emotion-1"
 >
   <h1>
     Boilerplate setup

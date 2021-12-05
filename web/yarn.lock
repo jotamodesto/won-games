@@ -1172,6 +1172,14 @@
     "@babel/runtime" "^7.14.0"
     "@emotion-icons/emotion-icon" "4.1.0"
 
+"@emotion-icons/remix-fill@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@emotion-icons/remix-fill/-/remix-fill-3.14.0.tgz#b75996187593b79073a8f6a3d1984916e9d53844"
+  integrity sha512-8/eMcu1EjcUsSLCKP99bhHTauMpLgdCfmQMBM7le1NHX4tX5lbP+V2cSScQN/ltWAJ0dn4ays5lacUZIqwb6iw==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    "@emotion-icons/emotion-icon" "4.1.0"
+
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.3.0.tgz#3a16850ba04d8d9651f07f3fb674b3436a4fb9d7"

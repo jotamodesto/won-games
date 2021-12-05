@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@emotion-icons/material-outlined": "^3.14.0",
+    "@emotion-icons/remix-fill": "^3.14.0",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "next": "12.0.4",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@emotion/babel-plugin": "^11.3.0",
     "@emotion/jest": "^11.6.0",
     "@storybook/addon-actions": "^6.4.7",
     "@storybook/addon-essentials": "^6.4.7",

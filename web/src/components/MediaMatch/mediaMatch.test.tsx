@@ -1,9 +1,6 @@
-import { matchers } from '@emotion/jest'
 import { render, screen } from '@testing-library/react'
 
 import MediaMatch from '.'
-
-expect.extend(matchers)
 
 describe('<MediaMatch />', () => {
   let desktopHeading: Element

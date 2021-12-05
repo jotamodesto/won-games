@@ -1,10 +1,7 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
-import { matchers } from '@emotion/jest'
 
 import Logo from '.'
-
-expect.extend(matchers)
 
 describe('<Logo />', () => {
   it('should render a white label by default', () => {

@@ -1,11 +1,8 @@
-import { matchers } from '@emotion/jest'
 import { screen } from '@testing-library/react'
 import { AddShoppingCart } from '@emotion-icons/material-outlined'
 
 import { renderWithTheme } from 'utils/tests/helpers'
 import Button from '.'
-
-expect.extend(matchers)
 
 describe('<Button />', () => {
   it('should render the medium size by default', () => {
