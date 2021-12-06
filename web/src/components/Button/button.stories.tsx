@@ -17,7 +17,7 @@ const meta = {
 } as Meta
 export default meta
 
-export const Basic: Story = (args) => <Button {...args} />
+export const Basic: Story<ButtonProps> = (args) => <Button {...args} />
 
 Basic.args = {
   children: 'Buy now'
@@ -29,4 +29,13 @@ WithIcon.args = {
   size: 'small',
   children: 'Buy now',
   icon: <AddShoppingCart />
+}
+
+export const Link: Story<ButtonProps> = (args) => <Button {...args} />
+
+Link.args = {
+  as: 'a',
+  children: 'Buy now',
+  href: '/link',
+  size: 'large'
 }

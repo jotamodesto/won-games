@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> should render correctly 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+@media (min-width: 48em) {
+  .emotion-0 {
+    box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 23rem;
+  background-color: #EAEAEA;
+  background-image: url(https://source.unsplash.com/user/willianjusten/1042x580);
+  -webkit-background-position: center center;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+@media (min-width: 48em) {
+  .emotion-2 {
+    height: 58rem;
+  }
+}
+
+.emotion-4 {
+  width: 100%;
+  padding: 2.4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 48em) {
+  .emotion-4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4.0rem;
+    border-radius: 0 0 0.4rem 0.4rem;
+  }
+}
+
+.emotion-6 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #FAFAFA;
+}
+
+@media (min-width: 48em) {
+  .emotion-6 {
+    font-size: 2.8rem;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FAFAFA;
+}
+
+@media (min-width: 48em) {
+  .emotion-8 {
+    font-size: 1.8rem;
+  }
+}
+
+.emotion-10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0.8rem;
+  color: #FAFAFA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
+  border: 0;
+  border-radius: 0.4rem;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  height: 5rem;
+  padding: 1.6rem 4.8rem;
+  font-size: 1.6rem;
+}
+
+.emotion-10:hover {
+  background: linear-gradient(180deg, #e35565 0%, #d958a6 50%);
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <div
+    aria-label="Defy death"
+    class="emotion-2 emotion-3"
+    role="img"
+    src="https://source.unsplash.com/user/willianjusten/1042x580"
+  />
+  <div
+    class="emotion-4 emotion-5"
+  >
+    <h2
+      class="emotion-6 emotion-7"
+    >
+      Defy death
+    </h2>
+    <h3
+      class="emotion-8 emotion-9"
+    >
+      <p>
+        Play the new 
+        <strong>
+          CrashLands
+        </strong>
+         season
+      </p>
+    </h3>
+    <a
+      class="emotion-10 emotion-11"
+      href="/games/defy-death"
+    >
+      <span>
+        Buy now
+      </span>
+    </a>
+  </div>
+</div>
+`;
