@@ -1,9 +1,20 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { up } from 'styled-breakpoints'
+import { up, down } from 'styled-breakpoints'
+
+import * as RibbonStyles from 'components/Ribbon/styles'
 
 export const Wrapper = styled.div`
   position: relative;
+
+  ${down('lg')} {
+    ${RibbonStyles.Wrapper} {
+      right: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
 
   ${up('md')} {
     box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);

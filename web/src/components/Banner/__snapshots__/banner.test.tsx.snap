@@ -5,6 +5,16 @@ exports[`<Banner /> should render correctly 1`] = `
   position: relative;
 }
 
+@media (max-width: 74.99875em) {
+  .emotion-0 .e61xnrw0 {
+    right: 0;
+  }
+
+  .emotion-0 .e61xnrw0::before {
+    display: none;
+  }
+}
+
 @media (min-width: 48em) {
   .emotion-0 {
     box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
