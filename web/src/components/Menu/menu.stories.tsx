@@ -8,11 +8,11 @@ const meta = {
 } as Meta
 export default meta
 
-export const Basic: Story<MenuProps> = (args) => <Menu {...args} />
+export const Basic: Story<MenuProps> = args => <Menu {...args} />
 
 Basic.parameters = {
   layout: 'fullscreen',
   backgrounds: {
-    default: 'dark'
+    default: 'won-dark'
   }
 }

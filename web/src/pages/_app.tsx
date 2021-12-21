@@ -9,16 +9,13 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Boilerplate Create Next App</title>
-        <meta
-          name="description"
-          content="Boilerplate created using create next app"
-        />
+        <title>Won Games</title>
+        <meta name="description" content="A new and better way to buy games" />
         <link rel="icon" href="/favicon.ico" />
         {/* <link rel="apple-touch-icon" href="/favicon.ico" /> */}
       </Head>
 
-      <Global styles={globalStyles} />
+      <Global styles={globalStyles()} />
       <Component {...pageProps} />
     </ThemeProvider>
   )
