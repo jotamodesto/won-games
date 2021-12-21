@@ -22,7 +22,7 @@ const Sections = styled.section`
     }
 
     ${GameCardSliderStyles.Wrapper} {
-      ${down('lg')} {
+      ${down('lg')({ theme })} {
         margin-right: calc(-${theme.grid.gutter} / 2);
       }
     }
