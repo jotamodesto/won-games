@@ -1,11 +1,12 @@
 import { css, Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { darken } from 'polished'
 
 import type { ButtonProps } from '.'
 
 type WrapperProps = { hasIcon: boolean } & Pick<
   ButtonProps,
-  'size' | 'fullWidth'
+  'size' | 'fullWidth' | 'showType'
 >
 
 const wrapperModifiers = {
@@ -34,11 +35,19 @@ const wrapperModifiers = {
         margin-left: ${theme.spacings.xxsmall};
       }
     }
+  `,
+  text: (theme: Theme) => css`
+    color: ${theme.colors.primary};
+    background: none;
+
+    &:hover {
+      color: ${darken(0.1, theme.colors.primary)};
+    }
   `
 }
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, size, fullWidth, hasIcon }) => css`
+  ${({ theme, size, fullWidth, hasIcon, showType }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -52,11 +61,14 @@ export const Wrapper = styled.button<WrapperProps>`
     transition: all 0.3s linear;
 
     &:hover {
-      background: linear-gradient(180deg, #e35565 0%, #d958a6 50%);
+      background: ${showType === 'text'
+        ? 'none'
+        : `linear-gradient(180deg, #e35565 0%, #d958a6 50%)`};
     }
 
     ${wrapperModifiers[size!](theme)}
     ${fullWidth && wrapperModifiers.fullWidth()}
     ${hasIcon && wrapperModifiers.withIcon(theme)}
+    ${showType === 'text' && wrapperModifiers[showType](theme)}
   `}
 `

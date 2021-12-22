@@ -7,6 +7,7 @@ type ButtonTypes = ButtonHTMLAttributes<HTMLButtonElement> &
 export type ButtonProps = {
   size?: 'small' | 'medium' | 'large'
   fullWidth?: boolean
+  showType?: 'normal' | 'text'
   icon?: React.ReactNode
   as?: React.ElementType
 } & ButtonTypes
@@ -16,10 +17,17 @@ const Button = ({
   icon,
   size = 'medium',
   fullWidth = false,
+  showType = 'normal',
   ...props
 }: ButtonProps) => {
   return (
-    <S.Wrapper size={size} fullWidth={fullWidth} hasIcon={!!icon} {...props}>
+    <S.Wrapper
+      size={size}
+      fullWidth={fullWidth}
+      hasIcon={!!icon}
+      showType={showType}
+      {...props}
+    >
       {icon}
       {!!children && <span>{children}</span>}
     </S.Wrapper>

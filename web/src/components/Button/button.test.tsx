@@ -53,6 +53,27 @@ describe('<Button />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
+  it('should render as text', () => {
+    renderWithTheme(
+      <Button icon={<AddShoppingCart data-testid="icon" />} showType="text">
+        Won Games
+      </Button>
+    )
+
+    expect(screen.getByRole('button', { name: /won games/i })).toHaveStyle({
+      background: 'none',
+      color: '#F231A5'
+    })
+
+    expect(screen.getByRole('button', { name: /won games/i })).toHaveStyleRule(
+      'background',
+      'none',
+      {
+        target: 'hover'
+      }
+    )
+  })
+
   it('should render as a link', () => {
     renderWithTheme(
       <Button as="a" href="/link">
