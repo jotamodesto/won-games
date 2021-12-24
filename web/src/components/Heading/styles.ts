@@ -37,6 +37,9 @@ const wrapperModifiers = {
     &::after {
       width: 3rem;
     }
+  `,
+  huge: (theme: Theme) => css`
+    font-size: ${theme.font.sizes.huge};
   `
 }
 

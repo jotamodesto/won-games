@@ -12,6 +12,12 @@ describe('<Logo />', () => {
     })
   })
 
+  it('should render logo with id', () => {
+    const { container } = renderWithTheme(<Logo id="myId" />)
+
+    expect(container.querySelector('#paint_linear_myId')).toBeInTheDocument()
+  })
+
   it('should render a black label when color is passed', () => {
     renderWithTheme(<Logo color="black" />)
 

@@ -26,3 +26,5 @@ const Slider = ({ children, settings }: SliderProps) => {
 }
 
 export default Slider
+
+export { default as SliderArrow } from './SliderArrow'

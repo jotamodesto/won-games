@@ -50,10 +50,10 @@ describe('<GameCardSlider />', () => {
   it('should render white arrows when passed', () => {
     renderWithTheme(<GameCardSlider items={items} color="white" />)
 
-    expect(screen.getByLabelText(/previous games/i)).toHaveStyle({
+    expect(screen.getByLabelText(/previous games/i).parentElement).toHaveStyle({
       color: '#FAFAFA'
     })
-    expect(screen.getByLabelText(/next games/i)).toHaveStyle({
+    expect(screen.getByLabelText(/next games/i).parentElement).toHaveStyle({
       color: '#FAFAFA'
     })
   })

@@ -4,7 +4,7 @@ import {
 } from '@emotion-icons/material-outlined'
 
 import GameCard, { GameCardProps } from 'components/GameCard'
-import Slider, { SliderSettings } from 'components/Slider'
+import Slider, { SliderSettings, SliderArrow } from 'components/Slider'
 import * as S from './styles'
 
 export type GameCardSliderProps = {
@@ -16,8 +16,10 @@ const settings: SliderSettings = {
   slidesToShow: 4,
   infinite: false,
   lazyLoad: 'ondemand',
-  nextArrow: <ArrowRight aria-label="next games" />,
-  prevArrow: <ArrowLeft aria-label="previous games" />,
+  nextArrow: <SliderArrow element={<ArrowRight aria-label="next games" />} />,
+  prevArrow: (
+    <SliderArrow element={<ArrowLeft aria-label="previous games" />} />
+  ),
   responsive: [
     {
       breakpoint: 1375,
