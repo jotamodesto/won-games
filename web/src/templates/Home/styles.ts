@@ -1,35 +1,9 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { down, up } from 'styled-breakpoints'
+import { up } from 'styled-breakpoints'
 
 import * as HeadingStyles from 'components/Heading/styles'
-import * as GameCardSliderStyles from 'components/GameCardSlider/styles'
 import * as HighlightStyles from 'components/Highlight/styles'
-
-const Sections = styled.section`
-  ${({ theme }) => css`
-    ${HeadingStyles.Wrapper},
-    ${HighlightStyles.Wrapper},
-    ${GameCardSliderStyles.Wrapper} {
-      margin-bottom: ${theme.spacings.medium};
-    }
-
-    ${HighlightStyles.Wrapper} {
-      ${down('md')({ theme })} {
-        margin-right: calc(-${theme.grid.gutter} / 2);
-        margin-left: calc(-${theme.grid.gutter} / 2);
-      }
-    }
-
-    ${GameCardSliderStyles.Wrapper} {
-      ${down('lg')({ theme })} {
-        margin-right: calc(-${theme.grid.gutter} / 2);
-      }
-    }
-
-    margin-bottom: calc(${theme.spacings.large} * 2);
-  `}
-`
 
 export const SectionBanner = styled.section`
   ${({ theme }) => css`
@@ -43,7 +17,7 @@ export const SectionBanner = styled.section`
   `}
 `
 
-export const SectionNews = styled(Sections)`
+export const SectionNews = styled.div`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.xxlarge} * 2);
 
@@ -65,29 +39,10 @@ export const SectionNews = styled(Sections)`
   `}
 `
 
-export const SectionMostPopular = styled(Sections)``
-
-export const SectionUpcomming = styled(Sections)`
+export const SectionUpcomming = styled.div`
   ${({ theme }) => css`
     ${HighlightStyles.Wrapper} {
       margin-top: calc(${theme.spacings.xlarge} * 2);
-    }
-  `}
-`
-
-export const SectionFreeGames = styled(Sections)``
-
-export const SectionFooter = styled.section`
-  ${({ theme }) => css`
-    padding-top: ${theme.spacings.xxlarge};
-    padding-bottom: ${theme.spacings.xsmall};
-    margin-top: ${theme.spacings.large};
-    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
-    background-color: ${theme.colors.white};
-
-    ${up('md')({ theme })} {
-      padding-top: calc(${theme.spacings.xxlarge} * 2);
-      clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
     }
   `}
 `

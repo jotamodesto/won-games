@@ -35,9 +35,7 @@ describe('<Menu />', () => {
 
     fireEvent.click(screen.getByLabelText(/open menu/i))
 
-    expect(
-      screen.getByRole('button', { name: /log in now/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /sign in/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /sign up/i })).toBeInTheDocument()
   })
 
@@ -47,7 +45,7 @@ describe('<Menu />', () => {
     fireEvent.click(screen.getByLabelText(/open menu/i))
 
     expect(
-      screen.queryByRole('button', { name: /log in now/i })
+      screen.queryByRole('link', { name: /sign in/i })
     ).not.toBeInTheDocument()
     expect(
       screen.queryByRole('link', { name: /sign up/i })

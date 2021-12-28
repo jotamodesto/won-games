@@ -20,23 +20,26 @@ const props = {
   freeHighlight: highlightMock
 }
 
+jest.mock('components/Showcase', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock Showcase" />
+  }
+}))
+
+jest.mock('components/BannerSlider', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock Banner Slider" />
+  }
+}))
+
 describe('<Home />', () => {
-  beforeEach(() => {
-    renderWithTheme(<Home {...props} />)
-  })
-
   it('should render menu and footer', () => {
-    expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
+    renderWithTheme(<Home {...props} />)
 
-    expect(
-      screen.getByRole('heading', { name: /contact us/i })
-    ).toBeInTheDocument()
-  })
+    expect(screen.getByTestId('Mock Banner Slider')).toBeInTheDocument()
 
-  it('should render the sections', () => {
-    expect(screen.getByRole('heading', { name: /news/i }))
-    expect(screen.getByRole('heading', { name: /most popular/i }))
-    expect(screen.getByRole('heading', { name: /upcomming/i }))
-    expect(screen.getByRole('heading', { name: /free games/i }))
+    expect(screen.getAllByTestId('Mock Showcase')).toHaveLength(5)
   })
 })
