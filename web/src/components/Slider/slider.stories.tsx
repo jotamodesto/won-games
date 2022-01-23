@@ -10,12 +10,12 @@ const meta = {
 export default meta
 
 const Slide = styled.div`
-  background: gray;
   width: 30rem;
   padding: 10rem 0;
-  border: 0.1rem solid red;
   color: white;
   text-align: center;
+  background: gray;
+  border: 0.1rem solid red;
 `
 
 const horizontalSettings: SliderSettings = {

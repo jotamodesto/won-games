@@ -4,7 +4,7 @@ import mockGames from './mock'
 import GameInfo, { GameInfoProps } from '.'
 
 const meta = {
-  title: 'GameInfo',
+  title: 'Game/GameInfo',
   component: GameInfo,
   parameters: {
     backgrounds: { default: 'won-dark' }

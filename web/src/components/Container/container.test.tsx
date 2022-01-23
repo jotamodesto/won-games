@@ -19,10 +19,10 @@ describe('<Container />', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .emotion-0 {
         max-width: 130rem;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: calc(3.2rem / 2);
         padding-right: calc(3.2rem / 2);
+        padding-left: calc(3.2rem / 2);
+        margin-right: auto;
+        margin-left: auto;
       }
 
       <div

@@ -6,7 +6,7 @@ import type { HeadingProps } from '.'
 
 type LineColor = NonNullable<HeadingProps['lineColor']>
 
-const wrapperModifiers = {
+export const wrapperModifiers = {
   lineLeft: (theme: Theme, lineColor: LineColor) => css`
     padding-left: ${theme.spacings.xxsmall};
     border-left: 0.7rem solid ${theme.colors[lineColor]};

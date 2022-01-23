@@ -10,13 +10,14 @@
     "lint:css": "stylelint 'src/**/*.{ts,tsx}' --max-warnings=0",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "prepare": "husky install",
+    "prepare": "cd .. && husky install web/.husky",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public"
   },
   "dependencies": {
+    "@emotion-icons/fa-brands": "^3.19.0",
     "@emotion-icons/material-outlined": "^3.14.0",
     "@emotion-icons/remix-fill": "^3.14.0",
     "@emotion/react": "^11.6.0",
