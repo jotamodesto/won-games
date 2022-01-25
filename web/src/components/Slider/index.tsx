@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import Head from 'next/head'
 import SlickSlider, { Settings } from 'react-slick'
 import * as S from './styles'
@@ -9,7 +10,10 @@ export type SliderProps = {
   settings: SliderSettings
 }
 
-const Slider = ({ children, settings }: SliderProps) => {
+const Slider: React.ForwardRefRenderFunction<SlickSlider, SliderProps> = (
+  { children, settings },
+  ref
+) => {
   return (
     <S.Wrapper>
       <Head>
@@ -20,11 +24,13 @@ const Slider = ({ children, settings }: SliderProps) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Head>
-      <SlickSlider {...settings}>{children}</SlickSlider>
+      <SlickSlider {...settings} ref={ref}>
+        {children}
+      </SlickSlider>
     </S.Wrapper>
   )
 }
 
-export default Slider
+export default forwardRef(Slider)
 
 export { default as SliderArrow } from './SliderArrow'
